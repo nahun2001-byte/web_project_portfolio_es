@@ -1,1 +1,213 @@
-<p>Hello, World!</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Basic Website</title>
+    <style>
+      /* Reset basic styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f9;
+        padding: 0;
+      }
+
+      /* Header styling */
+      header {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 20px text-align;
+        text-align: center;
+      }
+
+      header h1 {
+        margin-bottom: 10px;
+      }
+
+      /* Navigation Menu */
+      nav {
+        background-color: #34495e;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+      }
+
+      nav ul li {
+        display: inline;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 20px;
+        display: inline-block;
+      }
+
+      nav ul li a:hover {
+        background-color: #1abc9c;
+      }
+
+      /* Main Container */
+      .container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      section {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #1abc9c;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+
+      /* Sample Image Styling */
+      .responsive-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 15px auto;
+        border-radius: 4px;
+      }
+
+      /* Form Styling */
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .form-group input[type="text"],
+      .form-group input[type="email"],
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      button {
+        background-color: #1abc9c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #16a085;
+      }
+
+      /* Footer styling */
+      footer {
+        background-color: #2c3e50;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Website</h1>
+      <p>A clean, simple template built with HTML & CSS</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          This is a basic website structure template. You can use it as a
+          foundation to build single-page layouts or quick digital prototypes.
+          HTML controls the content and organization, while CSS embedded inside
+          the header controls the colors, spacing, and font choices.
+        </p>
+
+        <img
+          src="https://via.placeholder.com/600x300"
+          alt="Placeholder Image"
+          class="responsive-img"
+        />
+      </section>
+
+      <section id="services">
+        <h2>Our Services</h2>
+        <p>Here is a quick breakdown of what we offer:</p>
+        <ul>
+          <li>
+            <strong>Web Design:</strong> Structuring pages cleanly with valid
+            HTML5 tags.
+          </li>
+          <li>
+            <strong>Responsive Styling:</strong> Utilizing modern layout
+            concepts so your content scales cleanly on mobile devices.
+          </li>
+          <li>
+            <strong>Interactive Components:</strong> Adding basic form logic and
+            interactive UI elements.
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name..."
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
