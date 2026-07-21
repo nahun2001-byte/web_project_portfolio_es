@@ -2,6 +2,11 @@
    1. RESET & BASE STYLES
    ========================================================================== */
 /* The universal selector reset ensures consistent sizing and removes default margins across browsers */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +29,7 @@
 body {
   background-color: #000000;
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
   background:
@@ -52,7 +58,6 @@ body {
   line-height: 1;
   color: #ffffff;
   text-align: left;
-  grid-area: title; /* Assigns the title to the 'title' area in the grid */
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +68,7 @@ body {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1;
-  padding: 0px 330px 30px 0px;
+  padding: 0px 280px 30px 0px;
 }
 .header-description {
   font-weight: 400;
@@ -74,7 +79,7 @@ body {
   padding: 0px 0px 30px 0px;
 }
 .header-image {
-  width: 387px;
+  width: 508px;
   height: 500px;
   margin: 40px 120px 0px 20px;
 }
@@ -265,16 +270,55 @@ footer {
 /* ==========================================================================
    RESPONSIVE MEDIA QUERIES (Mobile First Adjustments)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container {
     margin: 15px;
     padding: 20px;
   }
-
+  .header-sub-title {
+    padding: 0px 0px 30px 0px; /* Adjusts padding for smaller screens */
+  }
+  .nav-links {
+    gap: 10px;
+  }
+  .columns-container {
+    flex-direction: column; /* Stacks columns vertically on smaller mobile screens */
+  }
+  .skills-container {
+    flex-wrap: wrap; /* Allows skill icons to wrap to the next line if needed */
+  }
+  .projects-container {
+    flex-direction: column; /* Stacks project cards vertically on smaller mobile screens */
+    width: 100%; /* Ensures project cards fill the available width on smaller screens */
+  }
+  .card {
+    width: 100%; /* Ensures each card fills the available width on smaller screens */
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    margin: 15px;
+    padding: 20px;
+  }
+  .header {
+    flex-direction: column-reverse;
+  }
+  .header-sub-title {
+    padding: 0px 0px 30px 0px; /* Adjusts padding for smaller screens */
+  }
   nav ul {
     flex-direction: column; /* Stack navigation options vertically on smaller mobile displays */
   }
   .columns-container {
     flex-direction: column; /* Stacks columns vertically on smaller mobile screens */
+  }
+  .skills-container {
+    flex-wrap: wrap; /* Allows skill icons to wrap to the next line if needed */
+  }
+  .projects-container {
+    flex-direction: column; /* Stacks project cards vertically on smaller mobile screens */
+  }
+  .card {
+    width: 100%; /* Ensures each card fills the available width on smaller screens */
   }
 }
